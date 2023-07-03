@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="descripcion.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="imagenes">
+			<h1 class="gg">Camisa Essential</h1>
+			<img src="imagenes/camisa.jpg" alt="Mi Imagen" width="350" height="350">
+			<p class="descripcion">La camisa Essential es la prenda imprescindible en tu guardarropa. Con su diseño versátil y atemporal, esta camisa combina comodidad y estilo en cada ocasión. Su tela suave y ligera te brinda un ajuste perfecto, mientras que su elegante corte garantiza una apariencia impecable. Completa tu look con la camisa Essential y siéntete siempre bien vestido.</p>
+		</div>
+		<div class="formulario">
+			<label for="cantidad">Cuantos articulo va a comprar:</label>
+			<input type="number" id="cantidad" min="1">
+			<button onclick="enviarFormulario()">enviar</button>
+			<br><br>
+			<div class="volver">
+				<a href="pg_productos.html">Volver</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function enviarFormulario() {
+			var cantidadInput = document.getElementById("cantidad");
+			var cantidad = cantidadInput.value;
+
+			if (cantidad === "") {
+				alert("No has ingresado ninguna cantidad");
+			} else {
+				alert("Articulos comprados: " + cantidad);
+				cantidadInput.value = ""; 
+			}
+		}
+	</script>
+</body>
+</html>

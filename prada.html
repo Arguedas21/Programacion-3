@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="descripcion.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="imagenes">
+			<h1 class="gg">Adidas x Prada</h1>
+			<img src="imagenes/adias.jpg" alt="Mi Imagen" width="350" height="350">
+			<p class="descripcion">La colaboración adidas x Prada redefine la moda urbana con la camisa Essential. Esta prenda icónica combina la estética vanguardista de Prada con la calidad y funcionalidad de adidas. Su diseño elegante y contemporáneo se combina con tejidos premium para ofrecer un estilo único y un confort excepcional. La camisa Essential de adidas x Prada es el epítome de la sofisticación deportiva.</p>
+		</div>
+		<div class="formulario">
+			<label for="cantidad">Cuantos articulo va a comprar:</label>
+			<input type="number" id="cantidad" min="1">
+			<button onclick="enviarFormulario()">enviar</button>
+			<br><br>
+			<div class="volver">
+				<a href="pg_productos.html">Volver</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function enviarFormulario() {
+			var cantidadInput = document.getElementById("cantidad");
+			var cantidad = cantidadInput.value;
+
+			if (cantidad === "") {
+				alert("No has ingresado ninguna cantidad");
+			} else {
+				alert("Articulos comprados: " + cantidad);
+				cantidadInput.value = ""; 
+			}
+		}
+	</script>
+</body>
+</html>

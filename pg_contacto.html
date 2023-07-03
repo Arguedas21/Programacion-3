@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos para Clientes</title>
+  <link rel="stylesheet" href="pg_c.css">
+</head>
+<body>
+
+  <header>
+    <div class="rr">
+    <h1 class="coloresiz">Contactos para Clientes</h1>
+    <a id="vl" class="dr" href="pagina_principall.html"> Ir al inicio </a>
+    </div>
+  </header>
+  <div class="colores">
+  
+    <section>
+      <h2 id="cc" >Atención al Cliente</h2>
+      <p>Si tienes alguna pregunta o necesitas ayuda, nuestro equipo de atención al cliente está aquí para ayudarte. Puedes comunicarte con nosotros a través de las siguientes formas:</p>
+      
+      <ul> <li>Teléfono: <a href="tel:85784512">85784512</a></li> <li>Correo
+      electrónico: <a href="Correo:siashop@contacto.gmail.com">siashop@contacto.gmail.com</a></li>
+      <li>Chat : <a href="https://whatsapp.com">WhatsApp</a></li> </ul> </section>
+    
+
+
+    <h1>Caja de comentarios: </h1>
+      
+    
+      <form id="regi" action="#" method="POST">
+    
+    
+        <div class="inline-div">
+    
+          <label for="nombre">Nombre Completo:</label>
+    
+          <input type="text" id="nombre" name="nombre">
+    
+          <div id="nomberror" class="error"></div>
+          
+        </div>
+       
+    
+        <div class="inline-div">
+          <label for="telefono">Teléfono:</label>
+          <input type="text" id="telefono" name="telefono">
+          <div id="teleerror" class="error"></div>
+        </div>
+    
+        <div class="inline-div">
+          <label for="comentario">Digite su comentario: </label>
+          <input type="text" id="comentario" name="comentario">
+          <div id="comenerror" class="error"></div>
+        </div>
+    
+     
+    <div id="bt">
+        <button id="dd" type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+      <script>
+        document.getElementById('regi').addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          
+          var nombre = document.getElementById('nombre').value.trim();
+          var telefono = document.getElementById('telefono').value.trim();
+          var comentario = document.getElementById('comentario').value.trim();
+          
+          
+    
+          clearErrorMessages();
+    
+          var isValid = true;
+    
+          if (nombre === '') {
+            displayErrorMessage('nomberror', 'Este campo esta vacio');
+            isValid = false;
+          }
+    
+          if (telefono === '') {
+            displayErrorMessage('teleerror', 'Este campo esta vacio');
+            isValid = false;
+          }
+    
+            if (comentario === '') {
+            displayErrorMessage('comenerror', 'Este campo esta vacio');
+            isValid = false;
+          }
+    
+          if (isValid==false) {
+            alert('Por favor, complete todos los campos .');
+          } else {
+            alert('Gracias por tu comentario');
+    
+            document.getElementById('regi').reset();
+    
+          }
+        });
+    
+        function clearErrorMessages() {
+          var errorMessages = document.getElementsByClassName('error');
+          for (var i = 0; i < errorMessages.length; i++) {
+            errorMessages[i].innerHTML = '';
+          }
+        }
+    
+        function displayErrorMessage(elementId, message) {
+          document.getElementById(elementId).innerHTML = message;
+       }
+    
+    
+    </script>
+
+
+ <footer>
+    <p>© 2023 Todos los derechos reservados. Sia shop</p>
+  </footer>
+
+
+ 
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="descripcion.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="imagenes">
+			<h1 class="gg">Parlante JBL</h1>
+			<img src="imagenes/parlante.jpg" alt="Mi Imagen" width="350" height="350">
+			<p class="descripcion">El parlante JBL es sinónimo de calidad de sonido excepcional. Con su diseño compacto y elegante, este parlante portátil te brinda una experiencia auditiva inigualable. Conecta tu dispositivo y disfruta de graves potentes y agudos nítidos. Además, su batería de larga duración te permite llevar tu música a todas partes. El parlante JBL es la elección perfecta para los amantes de la música.</p>
+		</div>
+		<div class="formulario">
+			<label for="cantidad">Cuantos articulo va a comprar:</label>
+			<input type="number" id="cantidad" min="1">
+			<button onclick="enviarFormulario()">enviar</button>
+			<br><br>
+			<div class="volver">
+				<a href="pg_productos.html">Volver</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function enviarFormulario() {
+			var cantidadInput = document.getElementById("cantidad");
+			var cantidad = cantidadInput.value;
+
+			if (cantidad === "") {
+				alert("No has ingresado ninguna cantidad");
+			} else {
+				alert("Articulos comprados: " + cantidad);
+				cantidadInput.value = ""; 
+			}
+		}
+	</script>
+</body>
+</html>

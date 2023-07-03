@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="descripcion.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="imagenes">
+			<h1 class="gg">Nike x Spider-Man</h1>
+			<img src="imagenes/tennis.jpg" alt="Mi Imagen" width="350" height="350">
+			<p class="descripcion">Potencia tu estilo y destaca en cada paso con las increíbles tenis Nike x Spiderman. Estas zapatillas revolucionarias fusionan la icónica tecnología de Nike con el poder del Hombre Araña. Su diseño único te brinda la agilidad y velocidad necesarias para enfrentar cualquier desafío. Con las tenis Nike x Spiderman, tu estilo y rendimiento se unen en una increíble experiencia. ¡Lleva tu juego al siguiente nivel!</p>
+		</div>
+		<div class="formulario">
+			<label for="cantidad">Cuantos articulo va a comprar:</label>
+			<input type="number" id="cantidad" min="1">
+			<button onclick="enviarFormulario()">enviar</button>
+			<br><br>
+			<div class="volver">
+				<a href="pg_productos.html">Volver</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function enviarFormulario() {
+			var cantidadInput = document.getElementById("cantidad");
+			var cantidad = cantidadInput.value;
+
+			if (cantidad === "") {
+				alert("No has ingresado ninguna cantidad");
+			} else {
+				alert("Articulos comprados: " + cantidad);
+				cantidadInput.value = ""; // Borrar el contenido del input
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="descripcion.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="imagenes">
+			<h1 class="gg">Sandalias Roxy</h1>
+			<img src="imagenes/sandaliasm.jpg" alt="Mi Imagen" width="350" height="350">
+			<p class="descripcion">Las sandalias Roxy son el complemento perfecto para tus días de verano. Con su estilo fresco y femenino, estas sandalias te brindan comodidad y estilo en cada paso. Su diseño ergonómico y plantilla acolchada garantizan una pisada suave y cómoda, mientras que sus correas ajustables te permiten un ajuste personalizado. Ya sea que estés paseando por la playa o explorando la ciudad, las sandalias Roxy te brindan el equilibrio perfecto entre moda y funcionalidad. Disfruta del verano con estilo y confort con las sandalias Roxy.</p>
+		</div>
+		<div class="formulario">
+			<label for="cantidad">Cuantos articulo va a comprar:</label>
+			<input type="number" id="cantidad" min="1">
+			<button onclick="enviarFormulario()">enviar</button>
+			<br><br>
+			<div class="volver">
+				<a href="pg_productos.html">Volver</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function enviarFormulario() {
+			var cantidadInput = document.getElementById("cantidad");
+			var cantidad = cantidadInput.value;
+
+			if (cantidad === "") {
+				alert("No has ingresado ninguna cantidad");
+			} else {
+				alert("Articulos comprados: " + cantidad);
+				cantidadInput.value = ""; 
+			}
+		}
+	</script>
+</body>
+</html>

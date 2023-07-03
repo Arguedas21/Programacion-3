@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="descripcion.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="imagenes">
+			<h1 class="gg">Sandalias Quicksilver</h1>
+			<img src="imagenes/sandalias.jpg" alt="Mi Imagen" width="350" height="350">
+			<p class="descripcion">Las sandalias Quiksilver son la opción ideal para los días soleados y aventuras en la playa. Con su diseño resistente y cómodo, estas sandalias te brindan el equilibrio perfecto entre estilo y funcionalidad. Su suela duradera y antideslizante te proporciona tracción en cualquier terreno, mientras que las correas ajustables aseguran un ajuste personalizado. Ya sea que estés caminando por la costa o relajándote junto a la piscina, las sandalias Quiksilver son tu compañero de confianza para disfrutar del verano al máximo.</p>
+		</div>
+		<div class="formulario">
+			<label for="cantidad">Cuantos articulo va a comprar:</label>
+			<input type="number" id="cantidad" min="1">
+			<button onclick="enviarFormulario()">enviar</button>
+			<br><br>
+			<div class="volver">
+				<a href="pg_productos.html">Volver</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function enviarFormulario() {
+			var cantidadInput = document.getElementById("cantidad");
+			var cantidad = cantidadInput.value;
+
+			if (cantidad === "") {
+				alert("No has ingresado ninguna cantidad");
+			} else {
+				alert("Articulos comprados: " + cantidad);
+				cantidadInput.value = ""; 
+			}
+		}
+	</script>
+</body>
+</html>
